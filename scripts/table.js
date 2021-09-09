@@ -57,7 +57,7 @@ function actionUpdate(id){
         parentElement.querySelectorAll('[name="email"]')[0].value= updated_elem.email;
         parentElement.querySelectorAll('[name="phone"]')[0].value = updated_elem.phone;
         parentElement.style.display = "block" // show form
-
+        
         document.querySelector('#addForm').style.display = "none"; // hide second form
     });
 }

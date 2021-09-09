@@ -1,11 +1,11 @@
 import {renderTable} from './table.js';
 import {renderCalendar} from './calendar.js';
 
-/* name, photo (BASE64), birth date, e-mail, phone */
 export var proto = {
     id: -1,
     name: "", 
-    photo: "", 
+    photo: "", // base64 
+    fileName: "", // name 
     birthdate: "", 
     email: "", 
     phone: ""
