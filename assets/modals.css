@@ -17,9 +17,12 @@
 
 .relative {
     position: relative;
-    top: -16px;
+    top: -3vh;
     height: 150px;
     width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .birthdate {
@@ -28,7 +31,8 @@
 
 .birthdate h3 {
     background-color: #222227;
-    width: fit-content;
+    width: min-content;
+    min-width: 125px;
     padding: 5px;;
 }
 

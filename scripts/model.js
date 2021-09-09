@@ -5,7 +5,7 @@ export var proto = {
     id: -1,
     name: "", 
     photo: "", // base64 
-    fileName: "", // name 
+    fileName: "", // file Path 
     birthdate: "", 
     email: "", 
     phone: ""
