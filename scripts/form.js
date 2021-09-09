@@ -6,12 +6,20 @@ function validateForm(form_selector, success) {
     const parentElement = document.querySelector(form_selector);
     let name = parentElement.querySelectorAll('[name="first_name"]')[0].value;
     let birthdate = parentElement.querySelectorAll('[name="birthdate"]')[0].value;
+    let photo = parentElement.querySelectorAll('[name="fileElem"]')[0].value
     let email = parentElement.querySelectorAll('[name="email"]')[0].value;
-    let phone = parentElement.querySelectorAll('[name="phone"]')[0].value;
-    if (name == "" || birthdate == "" || email == "" || phone == ""){
-        parentElement.querySelector(".alert").classList.add("active");
+    let phone = parentElement.querySelectorAll('[name="phone"]')[0].value; // a path to file
+    
+    let re = /(?:\.([^.]+))?$/;
+    const ext = re.exec(photo)[1]; // get photo extension from path
+    if( ext === "png" || ext === "jpg" ) {
+        if (name == "" || birthdate == "" || email == "" || phone == "" || photo == ""){
+            parentElement.querySelector(".alert").classList.add("active");
+        }else{
+            success();
+        }
     }else{
-        success();
+        alert("File extension can be only .jpg and .png ");
     }
 }
 

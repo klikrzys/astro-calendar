@@ -11,11 +11,7 @@ export var proto = {
     phone: ""
 };
 
-var birthdays = [
-    { id:"0", name: "Hania", photo: "", birthdate: "2001-05-01", email: "hania@gmail.com", phone: "+483132112" }, 
-    { id:"1", name: "Kasia", photo: "", birthdate: "2001-07-22", email: "kasia@gmail.com", phone: "+483132112" },
-    { id:"2", name: "Kasia2", photo: "", birthdate: "2001-07-23", email: "kasia@gmail.com", phone: "+483132112" }
-];
+var birthdays = [];
 
 export function updateModel(new_birthdays) {
     birthdays = new_birthdays;
