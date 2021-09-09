@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+}
+
+body {
+    background-color: #12121f;
+    color: #eee;
+}
+
+#container {
+    width: 100%;
+    background-color: #12121f;
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+#box {
+    width: 75vw;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #222227;
+    box-shadow: 0 0.5rem 3rem rgb(0 0 0 / 40%);
+}
+
+#calendar, #table, #forms {
+    margin: 10px 5vh;
+}
+
+/* Some specific elements */
+.btn {
+    background-color: #12121f;
+    border: none;
+    color: #eee;
+    padding: 7px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+
+.btn:hover {
+    background-color: #1a1a22;;
+}
+
+/* TABLE */
+#table {
+    text-align: center;
+    overflow-x:auto;
+    width: 100%;
+    margin: 0 auto;
+}
+
+table {
+    margin: 0 auto;
+    min-width: 360px;
+    width: 42vw;
+}
+
+#table h2 {
+    margin-bottom: 10px;
+}
+
+
+
+/* FORM */
+#forms {
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+}
+
+#forms h3 {
+    text-align: center;
+}
+
+label {
+    width: 200px;
+    text-align: right;
+    margin-top: 10px;
+    clear: both;
+    float:left;
+    margin-right:15px;   
+}
+
+input {
+    height: 20px;
+    width: 220px;
+    border: 1px solid #000;
+    margin-top: 10px;
+}
+
+
+#addForm, #updateForm {
+    display:block;
+    margin: 0 auto;
+}
+
+#addForm > p, #updateForm > p {
+    margin: 10px 0;
+}
+
+.submit {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.alert {
+    display: block;
+    visibility: hidden;
+    color: red;
+    width: 100%;
+    text-align: center;
+}

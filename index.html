@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NASA BIRTHDAY CALENDAR</title>
+        <link rel="stylesheet" href="assets/index.css">
+        <link rel="stylesheet" href="assets/calendar.css">
+        <link rel="stylesheet" href="assets/modals.css">
+        <link rel="stylesheet" href="assets/mobile.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div id="container">
+            <div id="box">
+                <div id="calendar">
+                    <div id="controls">
+                        <i class="prev" onclick="prev_month()">&#60;</i>
+                        <div id="date">
+                            <h1></h1>
+                            <p></p>
+                        </div>
+                        <i class="next" onclick="next_month()">&gt;</i>
+                    </div>
+                    <div id="calendarDays"></div>
+                </div>
+                    
+                <div id="table">
+                    <h2>&#127756;&#11088; NASA Calendar! &#11088;&#127756;</h2>
+                    <table id="birthdayRecords">
+                        <tbody>
+                            <tr><td colspan="4">Input birthdates of your friends and loved ones!</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="forms">
+                    <!-- name, photo, birth date, e-mail, phone -->
+                    <div id="addForm">
+                        <h3>Add New Birthday</h3>
+                        <text class="alert">&#9940;All fields are mandatory&#9940;</text>
+                        <div>
+                            <label>Name</label>
+                            <input type="text" name="first_name">
+                        </div>
+                        <div>
+                            <label for="birthdate_enter">Birthday:</label>
+                            <input type="date" id="birthday_enter" name="birthdate"
+                            value="2018-07-22"
+                            min="1995-08-16" max="2111-11-12">
+                        </div>
+                        <div>
+                            <label for="fileElem">Select a photo</label>
+                            <input type="file" id="fileElem" multiple accept="image/*" name="fileElem">
+                            </div>
+                        <div>
+                            <label>Email</label>
+                            <input type="email" name="email" required>
+                        </div>
+                        <div>
+                            <label>Phone number</label>
+                            <input type="tel" name="phone">
+                        </div>
+                        <div class="submit">
+                            <button class="btn" onclick="submitAddForm()">Add birthday</button>
+                        </div>
+                    </div>
+                    
+                    <!-- name, photo, birth date, e-mail, phone -->
+                    <div id="updateForm" style="display: none;">
+                        <input type="hidden" name="edited_id" />
+                        <h3>Update Birthday</h3>
+                        <text class="alert">&#9940;All fields are mandatory&#9940;</text>
+                    
+                        <div>
+                            <label>Name</label>
+                            <input type="text" name="first_name" />
+                        </div>
+                        <div>
+                            <label for="birthdate_update">Birthday:</label>
+                            <input type="date" id="birthdate_update" name="birthdate"
+                            value="2018-07-22"
+                            min="1995-08-16" max="2111-11-12">
+                        </div>
+                        <div>
+                            <label for="fileElem">Select a photo</label>
+                            <input type="file" id="update_fileElem" multiple accept="image/*" name="fileElem">
+                        </div>
+                        <div>
+                            <label>Email</label>
+                            <input type="email" name="email" required>
+                        </div>
+                        <div>
+                            <label>Phone number</label>
+                            <input type="tel" name="phone">
+                        </div>
+                        <div class="submit">
+                            <button class="btn" onclick="submitUpdateForm()">Update birthday</button>
+                            <button class="btn" onclick="hideUpdateForm()">Add New</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-bg">
+            <div id="modal">
+                <div class="relative banner">
+                    <div class="birthdate"></div>
+                    <button class="btn" onclick="closeModal()">X</button>
+                </div>
+                <img src="" class="image">
+                <p>
+                    Name: <text class="name"></text>
+                </p>
+                <p>
+                    Email: <text class="email"></text>
+                </p>
+                <p>
+                    Phone: <text class="phone"></text>
+                </p>
+            </div>
+        </div>
+
+        <script type="module" src="app.js"></script>
+    </body>
+</html>
+        
